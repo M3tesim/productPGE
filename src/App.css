@@ -62,3 +62,7 @@ body{  background-color: #232323;
 hr{
   color: #232323;
 }
+
+li{
+  padding: 2em;
+}

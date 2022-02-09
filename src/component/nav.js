@@ -1,19 +1,7 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import Select from './select'
-function Nav() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch("https://assessment-edvora.herokuapp.com")
-      .then((response) => response.json())
-      .then((data) => {
-        setData(() => data);
-        console.log(data);
-      });
-  }, []);
-
-
+function Nav(props) {
+ 
 
 
 
@@ -24,7 +12,7 @@ function Nav() {
 
       <div >
 
-        <Select data={data}/>
+        <Select data={props.data}/>
 
       </div>
     </div>
