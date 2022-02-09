@@ -6,6 +6,7 @@
 body{  background-color: #232323;
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -42,4 +43,22 @@ body{  background-color: #232323;
 .dashboard{
   margin-left: 50px;
  text-align: start;  
+}
+
+
+.nav-container{
+  background-color: #161616;
+  height: max-content; 
+
+}
+
+.nav-content{
+  padding: 20px;
+  text-align: left;
+  color:  #A5A5A5;
+  ;
+}
+
+hr{
+  color: #232323;
 }
