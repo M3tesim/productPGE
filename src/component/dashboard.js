@@ -6,8 +6,8 @@ function Dashboard(props) {
 
   return (
     <div className="dashboard">
-      <h2>Edvora</h2>
-      <h5>Products</h5>
+      <h1>Edvora</h1>
+      <h3>Products</h3>
      <List  brand={props.brand}  />
     </div>
   );
