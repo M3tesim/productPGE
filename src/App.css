@@ -72,9 +72,10 @@ li{
   max-height: 260px;
   max-width: fit-content;
   background-color: #131313;
-  
   display: flex;
   overflow-x: auto;
+  overflow-y: hidden;
+
 }
 .wrapper::-webkit-scrollbar{
   width: 0;
@@ -114,6 +115,7 @@ li{
 }
 .info{
   text-align: left;
+  color: #A5A5A5;
 
 
 }
@@ -121,5 +123,13 @@ li{
   text-align: left;
 margin-bottom: 15px;
 margin-top: 5px;
+color: #A5A5A5;
+
 
 }
+
+
+.dropdown{
+  background-color: #131313;
+}
+

@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Dropdown } from "semantic-ui-react";
 
 export default function Select(props) {
   const data = props.data;
-  const states = uniqueValues("address", "state");
-  const cities = uniqueValues("address", "city");
+  const states = uniqueValues2("address", "state");
+  const cities = uniqueValues2("address", "city");
+console.log("here "+JSON.stringify(states))
 
   const [newStates, setStates] = useState(states);
   const [newCity, setCity] = useState(cities);
@@ -12,13 +13,9 @@ export default function Select(props) {
   // creaating array with all the states
 
   // this function removes dublicates from the select menue
-  function uniqueValues(name, name2) {
+  function uniqueValues1(name) {
     let allItems;
-    if (name2 === true) {
-      allItems = data.map((item) => item[name][name2]);
-    } else {
       allItems = data.map((item) => item[name]);
-    }
 
     let uniqueItems = [...new Set(allItems)];
 
@@ -29,10 +26,22 @@ export default function Select(props) {
     }));
     return items;
   }
+ // this function removes dublicates from the select menue
+ function uniqueValues2(name, name2) {
+  let allItems;
+    allItems = data.map((item) => item[name][name2]);
+  let uniqueItems = [...new Set(allItems)];
 
+  const items = uniqueItems.map((item, index) => ({
+    key: index,
+    text: item,
+    value: item,
+  }));
+  return items;
+}
   
 
-  const products = uniqueValues("product_name");
+  const products = uniqueValues1("product_name");
 
 
   // change the value of array state to show the states of the choosen product

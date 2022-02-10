@@ -10,6 +10,7 @@ function List(props) {
           <h3>{item}</h3>
           <hr></hr>
           <div className="wrapper">
+            
             {data.map((item, index) => (
               <div key={index} className="item">
                 <img className="img" src={item.image} alt="product img"/>
@@ -26,7 +27,9 @@ function List(props) {
                 <div className="disc"> {item.discription}</div>
               </div>
             ))}
+            
           </div>
+          <br></br>
         </div>
       ))}
     </div>
