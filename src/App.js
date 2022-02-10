@@ -3,6 +3,11 @@ import Dashboard from "./component/dashboard";
 import Nav from "./component/nav";
 import React, {useEffect,useState} from 'react'
 
+
+
+
+export const dataContext = React.createContext();
+
 function App() {
 
 
@@ -35,7 +40,11 @@ return uniqueItems
           <Nav  data={data}/>
         </div>
         <div>
+        <dataContext.Provider value={data}>
+
           <Dashboard  brand={productsBrand()} />
+
+          </dataContext.Provider>
         </div>
       </header>
     </div>
