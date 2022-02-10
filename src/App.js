@@ -35,7 +35,7 @@ return uniqueItems
           <Nav  data={data}/>
         </div>
         <div>
-          <Dashboard  brand={productsBrand()}/>
+          <Dashboard  brand={productsBrand()} />
         </div>
       </header>
     </div>

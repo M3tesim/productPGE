@@ -66,3 +66,27 @@ hr{
 li{
   padding: 2em;
 }
+
+
+.wrapper{
+  max-height: 160px;
+  max-width: fit-content;
+  background-color: #131313;
+  
+  display: flex;
+  overflow-x: auto;
+  border-radius: 5%;
+}
+.wrapper::-webkit-scrollbar{
+  width: 0;
+}
+
+.wrapper .item{
+  margin: 10px 10px 10px 10px;
+  min-width: 130px;
+  height: 130px;
+  line-height: 130px;
+  text-align: center;
+  background-color:#474747;
+  border-radius: 5%;
+}
